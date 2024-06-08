@@ -7,10 +7,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Core Gui)
 qt_standard_project_setup()
 
+set(CMAKE_AUTORCC ON)
+
 qt_add_executable(textEditor
         src/main.cpp
         src/MainWindow.cpp
-        src/MainWindow.hpp)
+        src/MainWindow.hpp
+        application.qrc)
 
 target_link_libraries(textEditor PRIVATE
         Qt6::Widgets
