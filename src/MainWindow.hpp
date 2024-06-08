@@ -8,6 +8,8 @@
 #include <QMainWindow>
 #include <QSessionManager>
 #include <QPlainTextEdit>
+#include <QtWidgets>
+#include <QGuiApplication>
 
 class MainWindow : public QMainWindow {
 
@@ -34,16 +36,16 @@ private slots:
 #endif
 
 private:
-    void createAction();
+    void createActions();
     void createStatusBar();
-    void roadSettings();
+    void readSettings();
     void writeSettings();
     bool maybeSave();
     bool saveFile(const QString &fileName);
     void setCurrentFile(const QString &fileName);
     QString strippedName(const QString &fullFileName);
 
-    QPlainTextEdit *testEdit;
+    QPlainTextEdit *textEdit;
     QString curFile;
 };
 
