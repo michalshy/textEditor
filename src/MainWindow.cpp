@@ -97,6 +97,8 @@ void MainWindow::documentWasModified()
 
 void MainWindow::createActions() {
 
+    QToolBar *openedFiles = addToolBar(tr("Opened"));
+
     QMenu *fileMenu = menuBar()->addMenu(tr("&File"));
     QAction *newAct = new QAction(tr("&New"), this);
     newAct->setShortcuts(QKeySequence::New);
